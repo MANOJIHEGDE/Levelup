@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+document.addEventListener('DOMContentLoaded', () => {
+  const cdDisplay = document.getElementById('countdown');
+  const startB = document.getElementById('start');
+  const stopB = document.getElementById('stop');
+  let cdTimer;
+  let totalSecRemaining;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  startB.addEventListener('click', () => {
+      const hoursInput = parseInt(document.getElementById('hours').value) || 0;
+      const minutesInput = parseInt(document.getElementById('minutes').value) || 0;
+      const secondsInput = parseInt(document.getElementById('seconds').value) || 0;
 
-export default App;
+      totalSecRemaining = hoursInput * 3600 + minutesInput * 60 + secondsInput;
+      updateCountdownDisplay(totalSecRemaining);
+
+      if (cdTimer) clearInterval(cdTimer);
+
+      cdTimer = setInterval(() => {
+          if (totalSecRemaining > 0) {
+              totalSecRemaining--;
+              updateCountdownDisplay(totalSecRemaining);
+          } else {
+              clearInterval(cdTimer);
+              alert("Time's up!");
+          }
+      }, 1000);
+  });
+
+  stopB.addEventListener('click', () => {
+      if (cdTimer) clearInterval(cdTimer);
+  });
+
+  function updateCountdownDisplay(seconds) {
+      const hoursRemaining = Math.floor(seconds / 3600);
+      const minutesRemaining = Math.floor((seconds % 3600) / 60);
+      const secondsRemaining = seconds % 60;
+
+      cdDisplay.textContent = 
+          `${String(hoursRemaining).padStart(2, '0')}:
+           ${String(minutesRemaining).padStart(2, '0')}:
+           ${String(secondsRemaining).padStart(2, '0')}`;
+  }
+});
