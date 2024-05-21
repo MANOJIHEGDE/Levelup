@@ -7,29 +7,3 @@ body {
   background-color: white;
 }
 
-.timer {
-  text-align: center;
-}
-
-#countdown {
-  font-size: 90px;
-  margin-bottom: 20px;
-}
-
-input {
-  font-size: 16px;
-  padding: 20px;
-  margin: 5px;
-  width: 100px;
-}
-
-button {
-  font-size: 16px;
-  padding: 20px 40px;
-  margin: 5px;
-  cursor: pointer;
-  background-color: black;
-  color:yellow;
-  font-style: italic;
-  font-weight: 200
-}
