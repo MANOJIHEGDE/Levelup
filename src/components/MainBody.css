@@ -1,0 +1,22 @@
+.main-body {
+  padding: 20px;
+}
+
+.recent-forms {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.recent-forms h3 {
+  font-size: 18px;
+}
+
+.no-forms {
+  font-size: 16px;
+  color: gray;
+}
+
+.recent-forms p {
+  color: gray;
+  font-size: 14px;
+}

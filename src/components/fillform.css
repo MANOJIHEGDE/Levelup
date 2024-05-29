@@ -1,0 +1,120 @@
+/* src/styles.css */
+body, html {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height to center vertically */
+  }
+  
+ /* src/styles.css */
+
+  
+ .form-container {
+    width:690px;
+    padding-right:200px;
+    padding-left:650px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question, .response {
+    margin-bottom: 20px;
+    align-items: center;
+    padding-left: 60px;
+
+  }
+  
+  .question h3, .response h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .question, .response {
+    margin-bottom: 20px;
+      padding-left: 60px;
+  }
+  
+  .question h3, .response h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .text-input {
+    width: 50%;
+    padding: 10px;
+    
+    margin-top: 1px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-right:170px;
+    align-items: center;
+    margin-left:-200px;
+    color:white;
+    height:40px;
+    padding-left: 250px;
+    background-color: blueviolet;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50;
+    margin-bottom: 20px;
+    margin-right:100px;
+    align-items: center;
+    margin-left:-180px;
+    color: white;
+    padding-right: 50px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    margin-bottom: 10px;
+  }
+  
+  .option input {
+    margin-right: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  ul li {
+    margin-bottom: 25px;
+  }
+  
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  

@@ -1,0 +1,29 @@
+.template-gallery {
+    text-align: center;
+  }
+  
+  .templates {
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .template-item {
+    text-align: center;
+    gap:15px;
+    width: 230px;
+  }
+  
+  .template-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .template-item p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
