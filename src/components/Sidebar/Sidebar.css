@@ -1,10 +1,12 @@
 .sidebar{
-    position: sticky;
+    position: fixed;
     display: flex;
-    width:100%;
+    width:16%;
+    border-right: 1px solid #ccc;
     flex-wrap: wrap;
-    height: auto;
+    height: 100%;
     z-index: 100;
+    margin-top: 90px;
     flex: .2;
     background-color: #fff;
 }

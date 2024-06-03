@@ -1,14 +1,15 @@
 .videos {
     display: flex;
     flex-direction: column;
-    flex: 0.8;
-    padding: 20px;
+    flex: 1.0;
+    margin-left: 265px;
+    margin-top: 70px;
 }
 
 .video-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
     justify-content: center;
 }
 
@@ -59,7 +60,6 @@
     border-radius: 50%;
     object-fit: cover;
 }
-
 .pointer {
     cursor: pointer;
 }

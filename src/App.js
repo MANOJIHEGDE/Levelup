@@ -1,18 +1,29 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import MainPage from './components/MainPage';
 
+import VideoDetail from './components/Videos/VideoDetail';
 import './App.css';
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar'
-import Videos from './components/Videos/Videos';
+
+// Define a PageNotFound component
+const PageNotFound = () => {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>Sorry, the page you are looking for does not exist.</p>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <div className="main-display" style={{"display" : "flex"}}>
-      <Sidebar/>
-       <Videos/>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/videod" element={<VideoDetail />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
